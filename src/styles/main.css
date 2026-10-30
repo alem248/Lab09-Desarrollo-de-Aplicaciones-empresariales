@@ -1,0 +1,7 @@
+/* Punto de entrada: orden de menor a mayor especificidad */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+@import './layout/layout.css';
+@import './components/header.css';
+@import './components/footer.css';
