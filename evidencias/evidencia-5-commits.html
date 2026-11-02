@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evidencia 5 — Estructura de commits</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #0c0c0c;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: #cccccc;
+        padding: 16px;
+      }
+      .terminal {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: #0c0c0c;
+        border: 1px solid #333;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .titlebar {
+        background: #2d2d2d;
+        padding: 7px 12px;
+        font-size: 13px;
+        color: #fff;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+      .dot.r { background: #ff5f57; } .dot.y { background: #febc2e; } .dot.g { background: #28c840; }
+      .titlebar span.name { margin-left: 8px; color: #ccc; }
+      .body {
+        padding: 14px 16px;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 13.5px;
+        line-height: 1.75;
+        white-space: pre;
+        overflow-x: auto;
+      }
+      .prompt { color: #4ec9b0; }
+      .cmd { color: #dcdcaa; }
+      .hash { color: #569cd6; }
+      .branch { color: #d16d9e; }
+      .type-feat { color: #6a9955; }
+      .type-fix { color: #ce9178; }
+      .type-refactor { color: #4ec9b0; }
+      .type-chore { color: #9cdcfe; }
+      .type-docs { color: #c586c0; }
+      .note {
+        max-width: 1100px;
+        margin: 16px auto 0;
+        font-size: 12px;
+        color: #888;
+        line-height: 1.6;
+      }
+      .note code { color: #ce9178; }
+    </style>
+  </head>
+  <body>
+    <div class="terminal">
+      <div class="titlebar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="name">cine-app — git</span>
+      </div>
+      <div class="body"><span class="prompt">PS cine-app&gt;</span> <span class="cmd">git log --oneline --graph --all</span>
+<span class="type-feat">*</span> <span class="hash">02cdcb5</span> docs: corregir nombres de props en README y errores-react, guia de evidencias
+<span class="type-feat">*</span>   <span class="hash">b82c490</span> Merge branch 'main' of https://github.com/alem248/Lab09-Desarrollo-de-Aplicaciones-empresariales
+<span class="type-feat">|\</span>
+<span class="type-feat">| *</span> <span class="hash">6f2c82a</span> feat: agregar componentes Hero, MovieCard y MovieList con estructura de cartelera
+<span class="type-feat">* |</span> <span class="hash">49d0371</span> docs: documentar los 3 errores tipicos de React y actualizar README
+<span class="type-feat">* |</span> <span class="hash">b5624f9</span> feat: agregar Hero, MovieCard y MovieList, componer App con la cartelera
+<span class="type-feat">|/</span>
+<span class="type-feat">*</span> <span class="hash">15fe08f</span> feat: agregar componente Footer
+<span class="type-feat">*</span> <span class="hash">2a3a840</span> feat: agregar componente Header
+<span class="type-feat">*</span> <span class="hash">cc1d105</span> feat: agregar datos de la cartelera (9 peliculas) y datos del cine
+<span class="type-refactor">*</span> <span class="hash">d0db86c</span> refactor: limpiar plantilla y organizar src/ con arquitectura de CSS
+<span class="type-chore">*</span> <span class="hash">9883d07</span> chore: crear proyecto con Vite + React</div>
+    </div>
+
+    <p class="note">
+      Rama <code>main</code> sincronizada con
+      <code>https://github.com/alem248/Lab09-Desarrollo-de-Aplicaciones-empresariales.git</code>.
+      El grafo muestra el commit del equipo (<code>6f2c82a</code>) integrado mediante
+      un merge (<code>b82c490</code>), dejando la historia de ambos aportes en el repositorio.
+    </p>
+  </body>
+</html>

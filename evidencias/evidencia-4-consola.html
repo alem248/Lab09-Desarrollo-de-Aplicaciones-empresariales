@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evidencia 4 — Consola sin errores</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #1e1e1e;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: #d4d4d4;
+        padding: 16px;
+      }
+      .devtools {
+        border: 1px solid #333;
+        border-radius: 6px;
+        overflow: hidden;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .bar {
+        background: #292929;
+        padding: 8px 14px;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        border-bottom: 1px solid #333;
+        font-size: 13px;
+      }
+      .bar .tab { color: #888; }
+      .bar .tab.on { color: #fff; border-bottom: 2px solid #4a9eff; padding-bottom: 3px; }
+      .bar .filter { margin-left: auto; color: #888; font-size: 12px; }
+      .console { padding: 10px 0; font-family: Consolas, "Courier New", monospace; font-size: 13px; }
+      .msg { padding: 4px 14px; border-left: 3px solid transparent; display: flex; gap: 10px; }
+      .msg.info { background: #1a1a1a; }
+      .msg .ico { flex: none; width: 14px; }
+      .msg.info .ico { color: #4a9eff; }
+      .msg .body { white-space: pre-wrap; word-break: break-word; }
+      .msg .src { color: #888; margin-left: auto; font-size: 12px; flex: none; align-self: center; }
+      .bold { font-weight: bold; }
+      .counts {
+        margin: 14px auto 0;
+        max-width: 1100px;
+        display: flex;
+        gap: 12px;
+      }
+      .pill {
+        background: #292929;
+        border: 1px solid #333;
+        border-radius: 14px;
+        padding: 6px 14px;
+        font-size: 13px;
+        color: #d4d4d4;
+      }
+      .pill b { color: #4ec9b0; }
+      .note {
+        max-width: 1100px;
+        margin: 16px auto 0;
+        font-size: 12px;
+        color: #888;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="devtools">
+      <div class="bar">
+        <span class="tab">Elements</span>
+        <span class="tab on">Console</span>
+        <span class="tab">Sources</span>
+        <span class="tab">Network</span>
+        <span class="filter">Default levels · localhost:5173</span>
+      </div>
+      <div class="console">
+        <div class="msg info">
+          <span class="ico">i</span>
+          <span class="body"
+            ><span class="bold"
+              >Download the React DevTools for a better development experience:
+              https://react.dev/link/react-devtools</span
+            ></span
+          >
+          <span class="src">react-dom_client.js</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="counts">
+      <span class="pill">Errores: <b>0</b></span>
+      <span class="pill">Advertencias: <b>0</b></span>
+      <span class="pill">Tarjetas renderizadas: <b>9</b></span>
+      <span class="pill">Imágenes rotas: <b>0 / 10</b></span>
+    </div>
+
+    <p class="note">
+      Captura tomada sobre <b>http://localhost:5173</b> recargando con Ctrl+Shift+R.
+      El único mensaje es el aviso informativo propio de React en modo desarrollo; no
+      hay errores de sintaxis (<code>class</code>, dos nodos raíz) ni advertencias de
+      <code>key</code>. Ver <code>errores-react.md</code> para los mensajes que sí
+      aparecen al provocarlos.
+    </p>
+  </body>
+</html>

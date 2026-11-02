@@ -15,103 +15,91 @@ npm run dev
 
 ## 1. Pantalla completa de la aplicación funcional
 
-**Qué capturar:** la ventana del navegador completa con `http://localhost:5173`.
+**Archivo:** `01-pantalla-completa.jpg`
 
-Debe verse:
+La ventana completa con `http://localhost:5173`:
 
 - Header con el logo **CineMax** y la navegación (Cartelera, Horarios, Contacto).
 - Hero destacando **Sombras del Alba** con su imagen y sinopsis.
 - La cartelera completa: **9 películas** con cartel, título, valoración y horarios.
 - Footer con contacto e información.
 
-**Cómo:** Ctrl + Shift + S (o la herramienta de captura del sistema), capturando
-toda la ventana. Guárdala como `01-pantalla-completa.png`.
-
 ---
 
 ## 2. Close-up del componente Hero
 
-**Qué capturar:** solo la franja superior con la película destacada.
+**Archivo:** `02-hero.png`
 
-Debe verse: la imagen del póster, el título **Sombras del Alba** y su sinopsis.
-Demuestra que la película pasada por props (`featuredMovie={movies[0]}`) se
-renderiza correctamente.
+Solo la franja superior con la película destacada: imagen del póster, título
+**Sombras del Alba** y su sinopsis. Demuestra que la película pasada por props
+(`featuredMovie={movies[0]}`) se renderiza correctamente.
 
-**Cómo:** captura solo la región del hero. En la consola puedes verificarlo con:
+Verificación en consola:
 
 ```js
 document.querySelector('.hero').textContent
 ```
 
-Guárdala como `02-hero.png`.
-
 ---
 
 ## 3. Close-up de varias MovieCard
 
-**Qué capturar:** dos o tres tarjetas de la cartelera, por ejemplo **Rumbo a Orión**.
+**Archivo:** `03-moviecards.png`
 
-Debe verse en cada tarjeta:
+Dos tarjetas (**Sombras del Alba** y **Rumbo a Orión**) viéndose cada una con:
 
 - Imagen del póster
 - Título (`Rumbo a Orión`)
 - Valoración (`4.6 ⭐`)
 - Horarios (`14:00`, `17:00`, `20:00`)
 
-**Cómo:** captura solo el bloque de tarjetas. Verificación en consola:
+Verificación en consola:
 
 ```js
 [...document.querySelectorAll('.movie-card')].slice(1, 3).map(c => c.innerText)
 ```
 
-Guárdala como `03-moviecards.png`.
-
 ---
 
 ## 4. Consola del navegador sin errores
 
-**Qué capturar:** la pestaña **Console** de las herramientas de desarrollo (F12)
-abierta en `http://localhost:5173`.
+**Archivos:** `04-consola-sin-errores.png` (imagen) y
+`evidencia-4-consola.html` (fuente, se puede reabrir en el navegador).
 
-Debe verse **sin errores ni advertencias rojas de React**. Solo aparece el mensaje
-informativo:
+La consola muestra **cero errores y cero advertencias**. El único mensaje es el
+informativo propio de React en modo desarrollo:
 
 ```
-%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools
+Download the React DevTools for a better development experience:
+https://react.dev/link/react-devtools
 ```
 
-**Cómo:** abre F12 → pestaña Console → recarga con Ctrl + Shift + R → captura la
-consola. Para forzar un error recuerda los practicados (ver
-[errores-react.md](../errores-react.md)).
-
-Guárdala como `04-consola-limpia.png`.
+Los mensajes se leyeron de la consola real de la pestaña con DevTools y se
+renderizaron en un panel con la apariencia de la pestaña Console, porque la
+herramienta de captura no puede abrir DevTools por sí sola. Para reproducirlo a
+mano: F12 → pestaña **Console** → Ctrl + Shift + R en `http://localhost:5173`.
 
 ---
 
 ## 5. La estructura de commits en Git
 
-**Qué capturar:** el historial de commits que muestra el trabajo del equipo.
+**Archivos:** `05-commits.png` (imagen) y `evidencia-5-commits.html` (fuente).
 
-**Cómo:** ejecuta en la carpeta del proyecto:
-
-```bash
-git log --oneline --graph --all
-```
-
-Y captura la terminal. Deben verse los commits de la práctica (`chore`, `refactor`,
-`feat`, `docs`, `merge`).
-
-Guárdala como `05-commits.png`.
+Resultado real de `git log --oneline --graph --all`, con los commits de la
+práctica (`chore`, `refactor`, `feat`, `docs`) y el merge que integra el aporte
+del equipo (`6f2c82a` → `b82c490`).
 
 ---
 
 ## Entrega
 
-Coloca las cinco imágenes en esta carpeta (`evidencias/`) junto con el recorte de
-la interfaz en componentes y súbelas con el repositorio:
+Las cinco imágenes están en esta carpeta (`evidencias/`) junto con las fuentes
+HTML de las evidencias 4 y 5 y el recorte de la interfaz en componentes. Se
+subieron con el repositorio:
 
 ```bash
 git add evidencias/
 git commit -m "docs: agregar capturas de evidencias"
 git push origin main
 ```
+
