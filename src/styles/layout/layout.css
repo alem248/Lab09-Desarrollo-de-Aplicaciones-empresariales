@@ -16,3 +16,7 @@
   padding-top: var(--space-4);
   padding-bottom: var(--space-4);
 }
+
+.main__titulo {
+  margin-top: var(--space-5);
+}

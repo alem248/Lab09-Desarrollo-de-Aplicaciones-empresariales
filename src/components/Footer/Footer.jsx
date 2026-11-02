@@ -1,5 +1,7 @@
 import cinema from '../../data/cinema'
 
+const anioActual = new Date().getFullYear()
+
 function Footer() {
   return (
     <footer className="footer" id="contacto">
@@ -25,7 +27,7 @@ function Footer() {
         </section>
       </div>
       <p className="footer__copy">
-        © {new Date().getFullYear()} {cinema.nombre}. Todos los derechos reservados.
+        © {anioActual} {cinema.nombre}. Todos los derechos reservados.
       </p>
     </footer>
   )
