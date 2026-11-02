@@ -49,7 +49,7 @@ solución es envolver los elementos en un fragmento `<>...</>`.
 ## 3. Olvidar la clave en el `map`
 
 **Qué se hizo:** en `src/components/MovieList/MovieList.jsx` se quitó la prop `key`
-del `<MovieCard>` renderizado dentro del `.map()`.
+del `<li>` que se renderiza dentro del `.map()`.
 
 **Mensaje registrado en la consola:**
 
@@ -62,7 +62,7 @@ Check the render method of `MovieList`.
 
 **Por qué ocurre:** React usa `key` para identificar cada elemento de una lista y
 actualizar el DOM de forma eficiente. Sin ella, React no sabe qué elemento cambió y
-avisa. Aquí la clave es `pelicula.id`.
+avisa. Aquí la clave es `movie.id`.
 
 ---
 

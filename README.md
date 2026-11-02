@@ -40,13 +40,13 @@ src/
 
 ## Componentes
 
-| Componente  | Responsabilidad                                                              |
-| ----------- | ---------------------------------------------------------------------------- |
-| `Header`    | Logo del cine y navegación, leyendo los enlaces de `cinema.js`.               |
-| `Hero`      | Banner de la película destacada. Recibe la película por props (`pelicula`).   |
-| `MovieCard` | Tarjeta individual: imagen, título, valoración, clasificación y horarios.     |
-| `MovieList` | Recorre la cartelera con `map` y dibuja una `MovieCard` por película.         |
-| `Footer`    | Datos de contacto e información general del cine.                            |
+| Componente  | Responsabilidad                                                             |
+| ----------- | --------------------------------------------------------------------------- |
+| `Header`    | Logo del cine y navegación, leyendo los enlaces de `cinema.js`.              |
+| `Hero`      | Banner de la película destacada. Recibe la película por props (`featuredMovie`). |
+| `MovieCard` | Tarjeta individual: imagen, título, valoración y horarios. Recibe la película por props (`movie`). |
+| `MovieList` | Recorre la cartelera con `map` y dibuja una `MovieCard` por película, pasando `key={movie.id}`. |
+| `Footer`    | Datos de contacto e información general del cine.                           |
 
 ## Notas de la práctica
 
