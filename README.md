@@ -1,16 +1,55 @@
-# React + Vite
+# CineMax — Lab 09
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación de cartelera de cine construida con **React 19 + Vite 8**.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js v24.20.0 (o superior)
+- npm 11.19.0
 
-## React Compiler
+## Puesta en marcha
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install     # instalar dependencias
+npm run dev     # servidor de desarrollo en http://localhost:5173
+npm run build   # build de producción en dist/
+npm run lint    # lint con oxlint
+```
 
-## Expanding the Oxlint configuration
+## Estructura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+├── components/          # componentes de la interfaz
+│   ├── Header/Header.jsx
+│   ├── Hero/Hero.jsx
+│   ├── MovieCard/MovieCard.jsx
+│   ├── MovieList/MovieList.jsx
+│   └── Footer/Footer.jsx
+├── data/                # datos de la aplicación
+│   ├── cinema.js        # datos generales del cine
+│   └── movies.js        # cartelera (9 películas)
+├── styles/              # arquitectura CSS
+│   ├── base/            # variables, reset, tipografía
+│   ├── layout/          # contenedor y disposición general
+│   ├── components/      # estilos de cada componente
+│   └── main.css         # punto de entrada (ordena los imports)
+├── App.jsx              # composición de la aplicación
+└── main.jsx             # montaje de React en el DOM
+```
+
+## Componentes
+
+| Componente  | Responsabilidad                                                              |
+| ----------- | ---------------------------------------------------------------------------- |
+| `Header`    | Logo del cine y navegación, leyendo los enlaces de `cinema.js`.               |
+| `Hero`      | Banner de la película destacada. Recibe la película por props (`pelicula`).   |
+| `MovieCard` | Tarjeta individual: imagen, título, valoración, clasificación y horarios.     |
+| `MovieList` | Recorre la cartelera con `map` y dibuja una `MovieCard` por película.         |
+| `Footer`    | Datos de contacto e información general del cine.                            |
+
+## Notas de la práctica
+
+- Las películas se pasan por props desde `src/data/movies.js`; ningún componente tiene los datos hardcodeados.
+- `MovieList` usa `key={pelicula.id}` para que React identifique cada tarjeta.
+- Los errores típicos practicados (`class`, dos nodos raíz y `key` faltante) están documentados en [errores-react.md](./errores-react.md).
