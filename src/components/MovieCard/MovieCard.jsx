@@ -1,21 +1,25 @@
-function MovieCard({ pelicula }) {
+function MovieCard({ movie }) {
   return (
-    <article className="movie-card">
-      <img className="movie-card__img" src={pelicula.imagen} alt={`Cartel de ${pelicula.titulo}`} />
-      <div className="movie-card__cuerpo">
-        <h3 className="movie-card__titulo">{pelicula.titulo}</h3>
-        <p className="movie-card__meta">
-          <span className="movie-card__valoracion">{pelicula.valoracion.toFixed(1)} ⭐</span>
-          <span className="movie-card__clasificacion">{pelicula.clasificacion}</span>
-        </p>
-        <p className="movie-card__sinopsis">{pelicula.sinopsis}</p>
-        <ul className="movie-card__horarios">
-          {pelicula.horarios.map((hora) => (
-            <li key={hora}>{hora}</li>
+    <div className="movie-card">
+      <img
+        src={movie.imagen}
+        alt={movie.titulo}
+        className="movie-card__image"
+      />
+      <div className="movie-card__info">
+        <h3 className="movie-card__title">{movie.titulo}</h3>
+        <div className="movie-card__rating">
+          {movie.valoracion} ⭐
+        </div>
+        <p className="movie-card__horarios">
+          {movie.horarios.map((horario) => (
+            <span key={horario} className="movie-card__horario">
+              {horario}
+            </span>
           ))}
-        </ul>
+        </p>
       </div>
-    </article>
+    </div>
   )
 }
 

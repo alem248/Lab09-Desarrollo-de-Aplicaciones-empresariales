@@ -1,12 +1,14 @@
 import MovieCard from '../MovieCard/MovieCard'
 
-function MovieList({ peliculas }) {
+function MovieList({ movies: moviesProp }) {
   return (
-    <div className="movie-list">
-      {peliculas.map((pelicula) => (
-        <MovieCard key={pelicula.id} pelicula={pelicula} />
+    <ul className="movie-list">
+      {moviesProp.map((movie) => (
+        <li key={movie.id}>
+          <MovieCard movie={movie} />
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }
 

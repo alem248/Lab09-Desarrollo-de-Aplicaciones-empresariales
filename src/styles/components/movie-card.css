@@ -1,6 +1,11 @@
+.movie-list > li {
+  display: flex;
+}
+
 .movie-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -13,59 +18,38 @@
   border-color: var(--color-primary);
 }
 
-.movie-card__img {
+.movie-card__image {
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
 }
 
-.movie-card__cuerpo {
+.movie-card__info {
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: var(--space-3);
 }
 
-.movie-card__titulo {
+.movie-card__title {
   margin: 0 0 var(--space-2);
   font-size: 1.1rem;
 }
 
-.movie-card__meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-  margin: 0 0 var(--space-2);
-}
-
-.movie-card__valoracion {
+.movie-card__rating {
+  margin: 0 0 var(--space-3);
   color: var(--color-accent);
   font-weight: 700;
-}
-
-.movie-card__clasificacion {
-  padding: 2px var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  color: var(--color-muted);
-  font-size: 0.75rem;
-}
-
-.movie-card__sinopsis {
-  flex: 1;
-  margin: 0 0 var(--space-3);
-  color: var(--color-muted);
-  font-size: 0.9rem;
 }
 
 .movie-card__horarios {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  margin: 0;
 }
 
-.movie-card__horarios li {
+.movie-card__horario {
   padding: 4px var(--space-2);
   background: var(--color-bg);
   border: 1px solid var(--color-border);

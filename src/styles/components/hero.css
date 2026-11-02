@@ -9,59 +9,25 @@
   overflow: hidden;
 }
 
-.hero__img {
+.hero__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero__contenido {
+.hero__content {
   padding: var(--space-4);
   align-self: center;
 }
 
-.hero__etiqueta {
-  margin: 0 0 var(--space-2);
-  color: var(--color-primary);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.hero__titulo {
+.hero__title {
   margin: 0 0 var(--space-2);
   font-size: 2.2rem;
 }
 
-.hero__meta {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin: 0 0 var(--space-3);
-}
-
-.hero__valoracion {
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
-.hero__clasificacion {
-  padding: 2px var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  color: var(--color-muted);
-  font-size: 0.8rem;
-}
-
-.hero__sinopsis {
-  margin: 0 0 var(--space-3);
-  color: var(--color-muted);
-}
-
-.hero__horarios {
+.hero__synopsis {
   margin: 0;
-  font-weight: 600;
+  color: var(--color-muted);
 }
 
 @media (max-width: 700px) {
@@ -69,7 +35,7 @@
     grid-template-columns: 1fr;
   }
 
-  .hero__img {
+  .hero__image {
     height: 220px;
   }
 }
