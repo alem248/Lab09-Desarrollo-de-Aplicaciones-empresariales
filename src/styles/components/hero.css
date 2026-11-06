@@ -26,8 +26,28 @@
 }
 
 .hero__synopsis {
-  margin: 0;
+  margin: 0 0 var(--space-4);
   color: var(--color-muted);
+}
+
+.hero__eyebrow {
+  margin: 0 0 var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* Buscador integrado en el banner, con su llamada a la acción */
+.hero__search {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+
+.hero__search .movie-search {
+  flex: 1;
 }
 
 @media (max-width: 700px) {

@@ -7,6 +7,7 @@
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/hero.css';
+@import './components/movie-search.css';
 @import './components/movie-list.css';
 @import './components/movie-card.css';
 /* Al final: gana a las clases de componente en empates de especificidad */
