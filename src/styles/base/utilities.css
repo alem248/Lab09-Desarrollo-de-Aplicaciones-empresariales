@@ -1,0 +1,15 @@
+/* Utilidades: clases sueltas reutilizables en varios componentes.
+   Se importan al final de main.css a propósito: al tener la misma especificidad
+   que las clases de componente, el orden las deja ganar los desempates. */
+
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-muted {
+  color: var(--color-muted);
+}

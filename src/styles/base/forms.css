@@ -1,0 +1,40 @@
+/* Estilos base de formularios: usados por MovieSearch y por cualquier input nuevo.
+   Se limita a lo genérico; el aspecto concreto de cada control vive en su CSS de componente. */
+
+label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+}
+
+input[type='search'],
+input[type='text'] {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+input[type='search']::placeholder,
+input[type='text']::placeholder {
+  color: var(--color-muted);
+}
+
+input[type='search']:focus,
+input[type='text']:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}

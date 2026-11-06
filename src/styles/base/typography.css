@@ -8,3 +8,12 @@ h3 {
 h1 {
   font-size: 2rem;
 }
+
+p {
+  margin: 0 0 var(--space-3);
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--color-muted);
+}
