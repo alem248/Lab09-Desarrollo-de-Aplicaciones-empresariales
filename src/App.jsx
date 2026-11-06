@@ -6,11 +6,36 @@ import MovieList from './components/MovieList/MovieList'
 import Footer from './components/Footer/Footer'
 
 const RETARDO = 300 // ms que espera antes de filtrar
+const CLAVE_FAVORITAS = 'cinemax:favoritas'
+
+// Paso 10: lee las favoritas guardadas. Devuelve [] si no hay nada, si el
+// navegador bloquea el almacenamiento o si el valor guardado está corrupto.
+function cargarFavoritas() {
+  try {
+    const guardadas = localStorage.getItem(CLAVE_FAVORITAS)
+    const parsed = guardadas ? JSON.parse(guardadas) : []
+    return Array.isArray(parsed) ? parsed : []
+  } catch {
+    return []
+  }
+}
 
 function App() {
   // Paso 4: lista de favoritas. Vive en App porque MovieCard (nieto) la pinta
   // y MovieList (hijo) la recorre: se eleva al ancestro común.
-  const [favorites, setFavorites] = useState([])
+  // Paso 10: el valor inicial se lee de localStorage de forma perezosa, solo
+  // la primera vez que se monta el componente, para que sobrevivan a recargas.
+  const [favorites, setFavorites] = useState(cargarFavoritas)
+
+  // Paso 10: cada vez que cambian las favoritas se guardan en el navegador.
+  useEffect(() => {
+    try {
+      localStorage.setItem(CLAVE_FAVORITAS, JSON.stringify(favorites))
+    } catch {
+      // Almacenamiento no disponible (modo privado, cuota llena…): la app
+      // sigue funcionando, solo que sin persistir.
+    }
+  }, [favorites])
 
   // Paso 6: texto del buscador. Vive en App porque lo escribe Hero (banner)
   // y lo lee MovieList para filtrar: estado elevado al ancestro común.
